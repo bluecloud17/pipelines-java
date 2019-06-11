@@ -17,5 +17,5 @@ steps:
     goals: 'package'
 - task: DownloadBuildArtifacts@0
   inputs:
-    buildType: 'current
+    buildType: 'current'
     
