@@ -15,12 +15,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'package'
-- task: ArchiveFiles@2
+- task: DownloadBuildArtifacts@0
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)' 
-    includeRootFolder: true 
-    archiveType: 'zip' 
-    tarCompression: 'gz'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
-    replaceExistingArchive: true 
+    buildType: 'current
     
